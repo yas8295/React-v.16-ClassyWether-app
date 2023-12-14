@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function icon(code) {
   const icons = new Map([
@@ -161,7 +162,10 @@ class Weather extends React.Component {
         </h1>
         <div className="d-flex gap-5 justify-content-center flex-wrap">
           {date.map((e, i) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ type: "spring", bounce: 0.8, duration: 2 }}
               key={i}
               className="px-5 py-4 d-flex flex-column gap-3 align-items-center flex-sm-grow-0 flex-grow-1"
               style={{
@@ -177,7 +181,7 @@ class Weather extends React.Component {
               <p className="m-0" style={{ fontSize: "20px" }}>
                 {Math.ceil(min.at(i))}° — <b>{Math.ceil(max.at(i))}°</b>
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </>
