@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-v.16-ClassyWether-app/static/css/main.93116ce8.css",
-    "main.js": "/React-v.16-ClassyWether-app/static/js/main.23366d0d.js",
+    "main.css": "/React-v.16-ClassyWether-app/static/css/main.5c1d24b1.css",
+    "main.js": "/React-v.16-ClassyWether-app/static/js/main.607911f0.js",
     "static/media/fa-solid-900.ttf": "/React-v.16-ClassyWether-app/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/React-v.16-ClassyWether-app/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
     "static/media/fa-solid-900.woff2": "/React-v.16-ClassyWether-app/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
@@ -39,11 +39,11 @@
     "static/media/fa-v4compatibility.ttf": "/React-v.16-ClassyWether-app/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
     "static/media/fa-v4compatibility.woff2": "/React-v.16-ClassyWether-app/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/React-v.16-ClassyWether-app/index.html",
-    "main.93116ce8.css.map": "/React-v.16-ClassyWether-app/static/css/main.93116ce8.css.map",
-    "main.23366d0d.js.map": "/React-v.16-ClassyWether-app/static/js/main.23366d0d.js.map"
+    "main.5c1d24b1.css.map": "/React-v.16-ClassyWether-app/static/css/main.5c1d24b1.css.map",
+    "main.607911f0.js.map": "/React-v.16-ClassyWether-app/static/js/main.607911f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.93116ce8.css",
-    "static/js/main.23366d0d.js"
+    "static/css/main.5c1d24b1.css",
+    "static/js/main.607911f0.js"
   ]
 }
