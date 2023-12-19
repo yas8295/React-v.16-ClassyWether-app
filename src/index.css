@@ -1,11 +1,12 @@
 body {
-  background-color: #eabfb9;
-  color: #282828;
+  background-color: #313131;
+  color: #000000;
   font-family: "Cinzel", serif;
   font-family: "Cinzel Decorative", serif;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 }
 
 ::-webkit-scrollbar {
@@ -15,12 +16,6 @@ body {
 ::-webkit-scrollbar-thumb {
   background-color: #685391;
   border-radius: 16%;
-}
-
-.weather-box {
-  border: 2px solid black;
-  outline: 2px solid black;
-  outline-offset: 8px;
 }
 
 .loader {
