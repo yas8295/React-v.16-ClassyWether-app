@@ -123,14 +123,16 @@ class App extends React.Component {
             className="col-10 col-sm-4 text-center p-4 my-3"
             style={{
               backgroundColor: "white",
-              border: "none",
+              border: "5px solid #55a4ff",
               fontSize: "22px",
               fontFamily: "serif",
               borderRadius: "10px",
+              opacity: 0.8,
+              transition: "0.5s",
             }}
             type="text"
             placeholder="SEARCH FROM LOCATION"
-            value={this.state.location}
+            value={this.state.location.toUpperCase()}
             onChange={(e) => this.setState({ location: e.target.value })}
           />
           {this.state.loading ? (
