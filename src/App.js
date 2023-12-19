@@ -120,7 +120,7 @@ class App extends React.Component {
             Classy Weather
           </h1>
           <input
-            className="col-10 col-sm-4 text-center p-4 my-3"
+            className="col-11 col-sm-4 text-center p-4 my-3"
             style={{
               backgroundColor: "white",
               border: "5px solid #55a4ff",
@@ -187,7 +187,7 @@ class Weather extends React.Component {
           <img
             src={`https://flagcdn.com/32x24/${this.props.flag}.png`}
             alt=""
-            width={"30px"}
+            width={"40px"}
           />
         </h1>
         <div className="d-flex gap-5 justify-content-center flex-wrap">
