@@ -120,7 +120,7 @@ class App extends React.Component {
             Classy Weather
           </h1>
           <input
-            className="col-11 col-sm-4 text-center p-4 my-3"
+            className="col-12 col-sm-4 text-center p-4 my-3"
             style={{
               backgroundColor: "white",
               border: "5px solid #55a4ff",
@@ -136,7 +136,18 @@ class App extends React.Component {
             onChange={(e) => this.setState({ location: e.target.value })}
           />
           {this.state.loading ? (
-            <span className="loader my-5"></span>
+            <div class="container">
+              <div class="cloud front">
+                <span class="left-front"></span>
+                <span class="right-front"></span>
+              </div>
+              <span class="sun sunshine"></span>
+              <span class="sun"></span>
+              <div class="cloud back">
+                <span class="left-back"></span>
+                <span class="right-back"></span>
+              </div>
+            </div>
           ) : !this.state.location ? null : (
             <div className="d-flex flex-column flex-wrap gap-5 justify-content-center">
               <Weather
@@ -164,8 +175,6 @@ class Weather extends React.Component {
       sunrise,
       sunset,
     } = this.props.weather;
-
-    console.log(sunrise);
 
     if (!this.props.weather) return;
 
