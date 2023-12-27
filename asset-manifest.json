@@ -1,7 +1,9 @@
 {
   "files": {
     "main.css": "/React-v.16-ClassyWether-app/static/css/main.efd81b5f.css",
-    "main.js": "/React-v.16-ClassyWether-app/static/js/main.6d638541.js",
+    "main.js": "/React-v.16-ClassyWether-app/static/js/main.c2c68323.js",
+    "static/media/Download Free Mobile Phone Screensaver Wet Screen - 187 - MobileSMSPK_net.gif": "/React-v.16-ClassyWether-app/static/media/Download Free Mobile Phone Screensaver Wet Screen - 187 - MobileSMSPK_net.4e5aac128ab7f3f1d7ad.gif",
+    "static/media/klipartz.com.png": "/React-v.16-ClassyWether-app/static/media/klipartz.com.dc20259c1eff9978128e.png",
     "static/media/fa-solid-900.ttf": "/React-v.16-ClassyWether-app/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/React-v.16-ClassyWether-app/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
     "static/media/fa-solid-900.woff2": "/React-v.16-ClassyWether-app/static/media/fa-solid-900.bb975c966c37455a1bc3.woff2",
@@ -32,18 +34,18 @@
     "static/media/95.jpg": "/React-v.16-ClassyWether-app/static/media/95.15a6e9b0b0878df4d9fb.jpg",
     "static/media/96.jpg": "/React-v.16-ClassyWether-app/static/media/96.15a6e9b0b0878df4d9fb.jpg",
     "static/media/99.jpg": "/React-v.16-ClassyWether-app/static/media/99.15a6e9b0b0878df4d9fb.jpg",
-    "static/media/3.jpg": "/React-v.16-ClassyWether-app/static/media/3.563dfdb3d56babbf9298.jpg",
-    "static/media/45.jpg": "/React-v.16-ClassyWether-app/static/media/45.563dfdb3d56babbf9298.jpg",
-    "static/media/48.jpg": "/React-v.16-ClassyWether-app/static/media/48.563dfdb3d56babbf9298.jpg",
+    "static/media/3.jpg": "/React-v.16-ClassyWether-app/static/media/3.92edf1d9555bbf808e11.jpg",
+    "static/media/45.jpg": "/React-v.16-ClassyWether-app/static/media/45.92edf1d9555bbf808e11.jpg",
+    "static/media/48.jpg": "/React-v.16-ClassyWether-app/static/media/48.92edf1d9555bbf808e11.jpg",
     "static/media/fa-regular-400.woff2": "/React-v.16-ClassyWether-app/static/media/fa-regular-400.3223dc79c1adee56370b.woff2",
     "static/media/fa-v4compatibility.ttf": "/React-v.16-ClassyWether-app/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
     "static/media/fa-v4compatibility.woff2": "/React-v.16-ClassyWether-app/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/React-v.16-ClassyWether-app/index.html",
     "main.efd81b5f.css.map": "/React-v.16-ClassyWether-app/static/css/main.efd81b5f.css.map",
-    "main.6d638541.js.map": "/React-v.16-ClassyWether-app/static/js/main.6d638541.js.map"
+    "main.c2c68323.js.map": "/React-v.16-ClassyWether-app/static/js/main.c2c68323.js.map"
   },
   "entrypoints": [
     "static/css/main.efd81b5f.css",
-    "static/js/main.6d638541.js"
+    "static/js/main.c2c68323.js"
   ]
 }
