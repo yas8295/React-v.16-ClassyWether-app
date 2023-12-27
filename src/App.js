@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import sunny from "./images/klipartz.com.png";
+import rainy from "./images/Download Free Mobile Phone Screensaver Wet Screen - 187 - MobileSMSPK_net.gif";
 
 function icon(code) {
   const icons = new Map([
@@ -89,16 +91,16 @@ class App extends React.Component {
         }}
       >
         <div
-          className="position-absolute"
+          className="position-fixed"
           style={{
             zIndex: 0,
-            width: "100%",
-            height: "100%",
+            width: "100vw",
+            minHeight: "100vh",
             top: 0,
             left: 0,
             backgroundImage: `linear-gradient(rgba(36, 42, 46, 0.4), rgb(64 65 65 / 40%)),url(${myImage})`,
             backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+            backgroundRepeat: "repeat",
             backgroundSize: "cover",
           }}
         ></div>
@@ -120,7 +122,7 @@ class App extends React.Component {
             Classy Weather
           </h1>
           <input
-            className="col-12 col-sm-4 text-center p-4 my-3"
+            className="col-8 col-sm-4 text-center p-4 my-3 align-self-center"
             style={{
               backgroundColor: "white",
               border: "5px solid #55a4ff",
@@ -129,6 +131,7 @@ class App extends React.Component {
               borderRadius: "10px",
               opacity: 0.8,
               transition: "0.5s",
+              maxWidth: "85%",
             }}
             type="text"
             placeholder="SEARCH FROM LOCATION"
@@ -136,16 +139,16 @@ class App extends React.Component {
             onChange={(e) => this.setState({ location: e.target.value })}
           />
           {this.state.loading ? (
-            <div class="container">
-              <div class="cloud front">
-                <span class="left-front"></span>
-                <span class="right-front"></span>
+            <div className="container">
+              <div className="cloud front">
+                <span className="left-front"></span>
+                <span className="right-front"></span>
               </div>
-              <span class="sun sunshine"></span>
-              <span class="sun"></span>
-              <div class="cloud back">
-                <span class="left-back"></span>
-                <span class="right-back"></span>
+              <span className="sun sunshine"></span>
+              <span className="sun"></span>
+              <div className="cloud back">
+                <span className="left-back"></span>
+                <span className="right-back"></span>
               </div>
             </div>
           ) : !this.state.location ? null : (
@@ -202,25 +205,49 @@ class Weather extends React.Component {
         <div className="d-flex gap-5 justify-content-center flex-wrap">
           {date.map((e, i) => (
             <motion.div
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ type: "spring", bounce: 0.8, duration: 2 }}
-              whileHover={{ y: -20 }}
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
               key={i}
-              className="px-5 py-4 d-flex flex-column gap-3 align-items-center flex-sm-grow-0 flex-grow-1"
+              className="px-5 py-4 d-flex flex-column gap-3 align-items-center flex-sm-grow-0 flex-grow-1 position-relative"
               style={{
                 background: `${
                   this.props.color === 0 ||
                   this.props.color === 1 ||
                   this.props.color === 2 ||
-                  this.props.color === 3
-                    ? "linear-gradient(109deg, rgba(255,255,255,1) 26%, rgba(229,229,229,1) 55%, rgba(0,167,255,0.4647897244835434) 100%)"
-                    : "linear-gradient(109deg, rgba(0,0,0,1) 0%, rgba(119,181,225,0.9773947665003502) 88%)"
+                  this.props.color === 3 ||
+                  this.props.color === 45 ||
+                  this.props.color === 48
+                    ? "linear-gradient(181deg, rgb(255 255 255 / 32%) 26%, rgba(229, 229, 229, 0.97) 55%, rgb(255 255 255) 100%)"
+                    : "linear-gradient(109deg, rgb(0 0 0 / 58%) 0%, rgb(119 181 225 / 91%) 88%)"
                 }`,
                 borderRadius: "10px",
                 minWidth: "200px",
               }}
             >
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 0.7 }}
+                transition={{ duration: 4 }}
+                className="h-100 w-100 position-absolute"
+                style={{ left: 0, top: 0, borderRadius: "10px", zIndex: -1 }}
+              >
+                <img
+                  style={{ borderRadius: "10px" }}
+                  src={`${
+                    this.props.color === 0 ||
+                    this.props.color === 1 ||
+                    this.props.color === 2 ||
+                    this.props.color === 3 ||
+                    this.props.color === 45 ||
+                    this.props.color === 48
+                      ? sunny
+                      : rainy
+                  }`}
+                  alt=""
+                  width="100%"
+                  height="100%"
+                />
+              </motion.div>
               <h1
                 className="m-0 text-center"
                 style={{
@@ -229,7 +256,9 @@ class Weather extends React.Component {
                     this.props.color === 0 ||
                     this.props.color === 1 ||
                     this.props.color === 2 ||
-                    this.props.color === 3
+                    this.props.color === 3 ||
+                    this.props.color === 45 ||
+                    this.props.color === 48
                       ? "black"
                       : "white"
                   }`,
@@ -245,7 +274,9 @@ class Weather extends React.Component {
                     this.props.color === 0 ||
                     this.props.color === 1 ||
                     this.props.color === 2 ||
-                    this.props.color === 3
+                    this.props.color === 3 ||
+                    this.props.color === 45 ||
+                    this.props.color === 48
                       ? "black"
                       : "white"
                   }`,
@@ -261,7 +292,9 @@ class Weather extends React.Component {
                     this.props.color === 0 ||
                     this.props.color === 1 ||
                     this.props.color === 2 ||
-                    this.props.color === 3
+                    this.props.color === 3 ||
+                    this.props.color === 45 ||
+                    this.props.color === 48
                       ? "black"
                       : "white"
                   }`,
@@ -277,7 +310,9 @@ class Weather extends React.Component {
                     this.props.color === 0 ||
                     this.props.color === 1 ||
                     this.props.color === 2 ||
-                    this.props.color === 3
+                    this.props.color === 3 ||
+                    this.props.color === 45 ||
+                    this.props.color === 48
                       ? "black"
                       : "white"
                   }`,
@@ -294,7 +329,9 @@ class Weather extends React.Component {
                     this.props.color === 0 ||
                     this.props.color === 1 ||
                     this.props.color === 2 ||
-                    this.props.color === 3
+                    this.props.color === 3 ||
+                    this.props.color === 45 ||
+                    this.props.color === 48
                       ? "black"
                       : "white"
                   }`,
