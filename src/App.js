@@ -1,20 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { WiMoonWaningCrescent3 } from "react-icons/wi";
 import sunny from "./images/klipartz.com.png";
 import rainy from "./images/Download Free Mobile Phone Screensaver Wet Screen - 187 - MobileSMSPK_net.gif";
+import snowy from "./images/snowflakes-background-barcin.jpg";
+import { WiHorizonAlt } from "react-icons/wi";
+import { WiDaySunny } from "react-icons/wi";
+import { WiDayCloudy } from "react-icons/wi";
+import { WiDayFog } from "react-icons/wi";
+import { WiRain } from "react-icons/wi";
+import { WiShowers } from "react-icons/wi";
+import { WiSnowWind } from "react-icons/wi";
+import { WiStormShowers } from "react-icons/wi";
+import { WiThermometer } from "react-icons/wi";
+import { WiCloudy } from "react-icons/wi";
 
 function icon(code) {
   const icons = new Map([
-    [[0], "☀️"],
-    [[1], "🌤"],
-    [[2], "⛅️"],
-    [[3], "☁️"],
-    [[45, 48], "🌫"],
-    [[51, 56, 61, 66, 80], "🌦"],
-    [[53, 55, 63, 65, 57, 67, 81, 82], "🌧"],
-    [[71, 73, 75, 77, 85, 86], "🌨"],
-    [[95], "🌩"],
-    [[96, 99], "⛈"],
+    [[0], <WiDaySunny />],
+    [[1, 2], <WiDayCloudy />],
+    [[3], <WiCloudy />],
+    [[45, 48], <WiDayFog />],
+    [[51, 56, 61, 66, 80], <WiRain />],
+    [[53, 55, 63, 65, 57, 67, 81, 82], <WiShowers />],
+    [[71, 73, 75, 77, 85, 86], <WiSnowWind />],
+    [[95, 96, 99], <WiStormShowers />],
   ]);
   const i = [...icons.keys()].find((key) => key.includes(code));
   return icons.get(i);
@@ -154,7 +164,6 @@ class App extends React.Component {
           ) : !this.state.location ? null : (
             <div className="d-flex flex-column flex-wrap gap-5 justify-content-center">
               <Weather
-                key={{}}
                 weather={this.state.weather}
                 city={this.state.city}
                 flag={this.state.flag}
@@ -221,7 +230,7 @@ class Weather extends React.Component {
                     : "linear-gradient(109deg, rgb(0 0 0 / 58%) 0%, rgb(119 181 225 / 91%) 88%)"
                 }`,
                 borderRadius: "10px",
-                minWidth: "200px",
+                minWidth: "250px",
               }}
             >
               <motion.div
@@ -241,6 +250,13 @@ class Weather extends React.Component {
                     this.props.color === 45 ||
                     this.props.color === 48
                       ? sunny
+                      : this.props.color === 71 ||
+                        this.props.color === 73 ||
+                        this.props.color === 75 ||
+                        this.props.color === 77 ||
+                        this.props.color === 85 ||
+                        this.props.color === 86
+                      ? snowy
                       : rainy
                   }`}
                   alt=""
@@ -249,9 +265,9 @@ class Weather extends React.Component {
                 />
               </motion.div>
               <h1
-                className="m-0 text-center"
+                className="m-0 text-center d-flex align-items-center justify-content-center "
                 style={{
-                  fontSize: "70px",
+                  fontSize: "80px",
                   color: `${
                     this.props.color === 0 ||
                     this.props.color === 1 ||
@@ -285,7 +301,7 @@ class Weather extends React.Component {
                 {i === 0 ? "today" : String(new Date(date.at(i))).slice(0, 3)}
               </p>
               <p
-                className="m-0"
+                className="m-0 d-flex align-items-center"
                 style={{
                   fontSize: "25px",
                   color: `${
@@ -300,10 +316,11 @@ class Weather extends React.Component {
                   }`,
                 }}
               >
+                <WiThermometer></WiThermometer>
                 {Math.ceil(min.at(i))}° — <b>{Math.ceil(max.at(i))}°</b>
               </p>
               <p
-                className="m-0"
+                className="m-0 d-flex align-items-center gap-2"
                 style={{
                   fontSize: "25px",
                   color: `${
@@ -319,10 +336,11 @@ class Weather extends React.Component {
                   fontFamily: "initial",
                 }}
               >
-                ☀️ {sunrise[i].slice(-5)}
+                <WiHorizonAlt />
+                {sunrise[i].slice(-5)}
               </p>
-              <p
-                className="m-0"
+              <div
+                className="m-0 d-flex align-items-center"
                 style={{
                   fontSize: "25px",
                   color: `${
@@ -338,8 +356,9 @@ class Weather extends React.Component {
                   fontFamily: "initial",
                 }}
               >
-                🌙 {sunset[i].slice(-5)}
-              </p>
+                <WiMoonWaningCrescent3 />
+                {sunset[i].slice(-5)}
+              </div>
             </motion.div>
           ))}
         </div>
